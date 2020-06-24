@@ -1,12 +1,21 @@
 package burger_shop;
 
-public class Main {
 
 
-    public static void main(String[] args) {
+
+
+
+
+
+        public class Main {
+
+
+    public static void main (String[] args) {
 
         Hamburger hamburger = new Hamburger("Basic", "Sausage", 3.56, "White");
         double price = hamburger.itemizeHamburger();
+
+        //Hamburger
 
         hamburger.addHamburgerAddition1("Tomato", 0.27);
 
@@ -16,6 +25,10 @@ public class Main {
 
             System.out.println("Total Hamburger price is " + hamburger.itemizeHamburger());
 
+
+
+        //Healthy Burger
+
         HealthyBurger healthyBurger = new HealthyBurger("Bacon", 5.67);
 
         healthyBurger.addHamburgerAddition1("Egg", 5.43);
@@ -23,6 +36,10 @@ public class Main {
         healthyBurger.addHealthAddition1("Lentils", 3.41);
 
             System.out.println("Total Healthy Burger price is  " + healthyBurger.itemizeHamburger());
+
+
+        
+        //Deluxe
 
         DeluxeBurger db = new DeluxeBurger();
 

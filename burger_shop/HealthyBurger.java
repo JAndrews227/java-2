@@ -22,6 +22,7 @@ public class HealthyBurger extends Hamburger {
         this.healthyExtra2Price = price;
     }
 
+
     @Override
     public double itemizeHamburger() {
         double hamburgerPrice = super.itemizeHamburger();
