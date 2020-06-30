@@ -1,72 +1,75 @@
 package burger_shop.exercise_twothree;
 
-
-
 public class Menu {
-    private int id;
-    private String name;
-    private double price;
+    private final int id;
+    private final String name;
+    private final double price;
 
-
-    public Menu(int id, String name, double price) {
+    public Menu(final int id, final String name, final double price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-
-    public static Menu createHamburger(String meat, String bun) {
-        return new Hamburger(1000, "Hamburger", 7.0, meat, bun);
+    public static Menu createHamburger(final String meat, final String bun) {
+        return new Hamburger(1, "Hamburger", 4.59, meat, bun);
     }
 
-    public static Menu createHealthyBurger(String meat) {
-        return new HealthyBurger(1001, "Healthy Burger", 12.0, meat);
+    public static Menu createHealthyBurger(final String meat) {
+        return new HealthyBurger(2, "Healthy Burger", 4.49, meat);
     }
 
-    public static Menu createDeluxeBurger(String meat, String bun) {
-        return new DeluxeBurger(1002, "Deluxe Burger", 14.0, meat, bun);
+    public static Menu createDeluxeBurger(final String meat, final String bun) {
+        return new DeluxeBurger(3, "Deluxe Burger", 8.99, meat, bun);
     }
 
-    public static Menu createSideItem(int id) {
+    public static Menu createSideItem(final int id) {
         if (id == 1) {
-            return new Side(id, "Cheese", 2.0);
+            return new Side(id, "Cheese", .75);
         }
 
         if (id == 2) {
-            return new Side(id, "Lettuce", 0.5);
+            return new Side(id, "Lettuce", 0);
 
         }
         if (id == 3) {
-            return new Side(id, "Tomato", 0.5);
+            return new Side(id, "Tomato", 0);
 
         }
+        
         if (id == 4) {
-            return new Side(id, "Extra Secret Sauce", 1.0);
+            return new Side(id, "Pickles", 0);
 
         }
+
         if (id == 5) {
-            return new Side(id, "Pickles", 0.5);
-
+            return new Side(id, "EXTRA Pickles!", .50);
         }
+
         if (id == 6) {
-            return new Side(id, "Onion", 0.5);
+            return new Side(id, "Onion", 0);
 
         }
-        //
+        
+        if (id == 7) {
+            return new Side(id, "Coca-Cola", 1.5);
+
+        }
+        if (id == 8) {
+            return new Side(id, "Dr. Pepper", 1.5);
+
+        }
+        if (id == 9) {
+            return new Side(id, "Sweet Tea", 1.5);
+
+        }
+
+        if (id == 10) {
+            return new Side(id, "Fries", 2.5);
+
+        }
         if (id == 11) {
-            return new Side(id, "Small Coke", 3.0);
-
-        }
-        if (id == 12) {
-            return new Side(id, "Large Coke", 5.0);
-
-        }
-        if (id == 13) {
-            return new Side(id, "Small Fries", 2.5);
-
-        }
-        if (id == 14) {
-            return new Side(id, "Large Fries", 4.0);
+            return new Side(id, "Onion Rings", 3.0);
 
         }
         return null;

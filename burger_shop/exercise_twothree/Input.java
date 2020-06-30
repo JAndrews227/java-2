@@ -40,7 +40,7 @@ public class Input {
                 case 1:
                 case 2:
                 case 3:
-                    //todo could be better
+                    
                     String meat = selectMeatType();
                     String bun = selectBunType(choice);
                     addMenuItem(choice, meat, bun);
@@ -81,19 +81,19 @@ public class Input {
             order.createOrder();
             printSides();
             if (i == 1) {
-                order.addBurgerToOrder(1000, meat, bun);
+                order.addBurgerToOrder(1, meat, bun);
                 for (int j = 0; j < 4; j++) {
                     order.addSideToOrder(selectSide(j + 1));
                 }
             }
             if (i == 2) {
-                order.addBurgerToOrder(1001, meat, bun);
+                order.addBurgerToOrder(2, meat, bun);
                 for (int j = 0; j < 6; j++) {
                     order.addSideToOrder(selectSide(j + 1));
                 }
             }
             if (i == 3) {
-                order.addBurgerToOrder(1002, meat, bun);
+                order.addBurgerToOrder(3, meat, bun);
                 order.addSideToOrder(12);
                 order.addSideToOrder(14);
             }
@@ -103,24 +103,23 @@ public class Input {
         private static void printWelcome() {
             System.out.println("Welcome to Bills Burgers! ");
             System.out.println(" ");
-            System.out.println("Please, prompt correctly, we don't handle errors yet"); //todo
+        
 
         }
 
         private static void printMainMenu() {
             System.out.println(" ");
-            System.out.println("What would you like to do? ");
+            System.out.println("Ready to Order? ");
             System.out.println(" ");
-            System.out.println("[1] Create new order");
-            System.out.println("[9] Exit");
-            //System.out.println("[23] /*ADMIN ONLY!!!*/ Print previous order"); //todo
+            System.out.println("[1] Order");
+            System.out.println("[0] Cancel");
+           
         }
 
         private static void printMenu() {
-            System.out.println("[1] Classic Burger [$7]");
-            System.out.println("[2] Healthy Burger with some additional sides [$12] ");
-            System.out.println("[3] Deluxe Burger with large Coke and large fries [$13]");
-            System.out.println("[4] Only side dishes  /* not available yet */"); //todo
+            System.out.println("[1] Classic Burger [$4.55]");
+            System.out.println("[2] Healthy Burger with some additional sides [$4.49] ");
+            System.out.println("[3] Deluxe Burger with large Coke and large fries [$8.99]");
             System.out.println(" ");
             System.out.println("[0] Cancel");
         }
@@ -133,25 +132,33 @@ public class Input {
                 System.out.println("Healthy Burger selected. You can choose up to 6 sides.");
             }
             if (i == 3) {
-                System.out.println("Deluxe Burger selected. Large Coke and Large Fries added.");
+                System.out.println("Deluxe Burger selected. Large Drink and Large Fries added.");
             }
         }
 
         private static void printSides() {
             System.out.println("Select side dishes: ");
+
             System.out.println(" ");
-            System.out.println("[1]Cheese [$2]");
-            System.out.println("[2]Lettuce [50c]");
-            System.out.println("[3]Tomato [50c]");
-            System.out.println("[4]Extra Secret Sauce [$1]");
-            System.out.println("[5]Pickles [50c]");
-            System.out.println("[6]Onion [50c]");
-            System.out.println(" ");
-            System.out.println("[11]Small Coke [$3]");
-            System.out.println("[12]Large Coke [$5]");
-            System.out.println("[13]Small Fries [$2.50]");
-            System.out.println("[14]Large Fries [$4]");
-            System.out.println(" ");
+
+            System.out.println("[1]Cheese [75c]");
+
+            System.out.println("[2]Lettuce [0]");
+
+            System.out.println("[3]Tomato [0]");
+
+            System.out.println("[4]Pickles [0]");
+
+            System.out.println("[5]EXTRA Pickles!! [50c]");
+
+            System.out.println("[6]Onion [0]");
+
+            System.out.println("Drink and Side??");
+            System.out.println("[7]Coca-Cola [$1.50]");
+            System.out.println("[8]Dr. Pepper [$1.50]");
+            System.out.println("[9]Sweet Tea [$1.50]");
+            System.out.println("[10]Fries [$2.50]");
+            System.out.println("[11]Onion Rings [$3.00] ");
         }
     }
     

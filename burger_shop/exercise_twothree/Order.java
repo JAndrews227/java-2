@@ -6,8 +6,8 @@ import Output;
 import java.util.ArrayList;
 
 public class Order {
-    private int orderNumber = 0; //todo
-    private int id;
+    private int orderNumber = 0; 
+   // private int id;
     private String meatType;
     private String bunType;
 
@@ -22,17 +22,17 @@ public class Order {
     }
 
     public void addBurgerToOrder(int id, String meat, String bun) {
-        if (id == 1000) {
+        if (id == 1) {
             orderList.add(Menu.createHamburger(meat, bun));
             meatType = meat;
             bunType = bun;
         }
-        if (id == 1001) {
+        if (id == 2) {
             orderList.add(Menu.createHealthyBurger(meat));
             meatType = meat;
-            bunType = "Brown Rye Bread"; //todo
+            bunType = "Brown Rye Bread"; 
         }
-        if (id == 1002) {
+        if (id == 3) {
             orderList.add(Menu.createDeluxeBurger(meat, bun));
             meatType = meat;
             bunType = bun;
