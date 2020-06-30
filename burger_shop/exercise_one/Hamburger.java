@@ -1,10 +1,12 @@
-package burger_shop;
+package burger_shop.exercise_one;
+
+
 
 public class Hamburger {
                 private String name;
                 private String meat;
                 private double price;
-                private String bunType;
+                private String breadType;
 
                 private String addition1Name;
                 private double addition1Price;
@@ -18,14 +20,17 @@ public class Hamburger {
                 private String addition4Name;
                 private double addition4Price;
 
-    public Hamburger(String name, String meat, double price, String bunType) {
+    public Hamburger(String name, String meat, double price, String breadType) {
                 this.name = name;
                 this.meat = meat;
                 this.price = price;
-                this.bunType = bunType;
+                this.breadType = breadType;
     }
 
-    public void addHamburgerAddition1(String name, double price) {
+    public Hamburger(int i, String string, double d, String meat2, String bread) {
+	}
+
+	public void addHamburgerAddition1(String name, double price) {
                 this.addition1Name = name;
                 this.addition1Price = price;
     }
@@ -42,11 +47,15 @@ public class Hamburger {
                 this.addition4Name = name;
                 this.addition4Price = price;
     }
+    public void addHamburgerAddition5(String name, double price) {
+        this.addition4Name = name;
+        this.addition4Price = price;
+}
 
     public double itemizeHamburger() {
 
                 double hamburgerPrice = this.price;
-                System.out.println(this.name + " hamburger " + " on a " + this.bunType + " bun "
+                System.out.println(this.name + " hamburger " + " on a " + this.breadType + " bun "
                         + " with " + this.meat + ", price is "  + this.price);
 
                 if(this.addition1Name != null) {

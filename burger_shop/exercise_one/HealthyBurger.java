@@ -1,4 +1,6 @@
-package burger_shop;
+package burger_shop.exercise_one;
+
+
 
 public class HealthyBurger extends Hamburger {
 
@@ -9,7 +11,7 @@ public class HealthyBurger extends Hamburger {
     private double healthyExtra2Price;
 
     public HealthyBurger(String meat, double price) {
-        super("Healthy", meat, price, "Brown rye");
+        super("Healthy", meat, price, "Wheat");
     }
 
     public void addHealthAddition1(String name, double price) {
